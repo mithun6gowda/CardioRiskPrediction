@@ -56,6 +56,6 @@ if st.button("Predict"):
 
     # Prediction
     prob = model.predict_proba(data_df)[0][1]
-
+    st.write("Probability:", prob)
     st.subheader(f"Risk Probability: {prob:.2f}")
     st.success("High Risk" if prob > 0.5 else "Low Risk")
